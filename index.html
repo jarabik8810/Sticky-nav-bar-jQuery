@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by jarabik8810 (http://jsbin.com/gonujey/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="StickyNavBar jQuery">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <title>JS Bin</title>
+<style id="jsbin-css">
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+.text {
+  text-align: center;
+  height: 100px;
+  background: #262626;  
+}
+.text h1 {
+  margin: 0;
+  line-height: 100px;
+  color: #fff;
+  font-size: 40px; 
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  background: #f00;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 20px;
+  display: block;
+}
+
+section {
+  height: 300px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+
+
+</style>
+</head>
+<body>
+  <div class="text">
+    <h1>Sticky Navigation Bar</h1>
+  </div>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Sevice</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <section></section>
+  <section></section>
+  <section></section>
+<script id="jsbin-javascript">
+$(window).scroll(function(){
+  if($(this).scrollTop()>100){
+    $('.menu').addClass("sticky");
+  }
+  else{
+    $('.menu').removeClass("sticky");
+  }
+})
+</script>
+</body>
+</html>
